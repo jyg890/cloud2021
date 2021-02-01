@@ -21,7 +21,7 @@
         <!--自定义api通用包-->
         <dependency>
             <groupId>com.maxi.springcloud</groupId>
-            <artifactId>cloud-api-comons</artifactId>
+            <artifactId>cloud-api-commons</artifactId>
             <version>${project.version}</version>
         </dependency>
         <!--boot web acctuator-->

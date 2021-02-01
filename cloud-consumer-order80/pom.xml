@@ -65,9 +65,8 @@
         </dependency>
         <dependency>
             <groupId>com.maxi.springcloud</groupId>
-            <artifactId>cloud-api-comons</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <artifactId>cloud-api-commons</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>

@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * @author JYG
  * @description
- * @create 2021−01-29 4:32 下午
+ * @create 2021−02-01 3:11 下午
  */
 @Data
 @AllArgsConstructor
@@ -18,5 +18,4 @@ public class Payment implements Serializable {
 
     private Long id;
     private String serial;
-
 }

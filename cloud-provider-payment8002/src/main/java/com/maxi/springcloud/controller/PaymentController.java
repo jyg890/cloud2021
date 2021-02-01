@@ -12,13 +12,12 @@ import javax.annotation.Resource;
 /**
  * @author JYG
  * @description
- * @create 2021−01-30 1:05 下午
+ * @create 2021−02-01 2:04 下午
  */
 @RestController
 @Slf4j
 @RequestMapping("/payment")
 public class PaymentController {
-
     @Resource
     private PaymentService paymentService;
 
