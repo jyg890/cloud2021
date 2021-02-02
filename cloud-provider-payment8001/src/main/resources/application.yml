@@ -28,7 +28,11 @@ eureka:
     #defaultZone: http://localhost:7001/eureka
     # 集群版
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
-
+  instance:  #修改主机名称 在status中
+    instance-id: payment8001
+    prefer-ip-address: true #访问路径可以现实ip地址
+    lease-renewal-interval-in-seconds: 30 #eureka客户端向服务端发送心跳的时间间隔 默认30s
+    lease-expiration-duration-in-seconds: 90 #服务端在最后一次收到心跳后等待的时间上限 默认90s
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
   type-aliases-package: com.maxi.springcloud.entity
