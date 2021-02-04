@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author JYG
@@ -66,5 +67,22 @@ public class PaymentController {
         }
 
         return this.discoveryClient;
+    }
+
+    //手写轮询算法测试接口
+    @GetMapping("/lb")
+    public String getPaymentLB(){
+        return servicePort;
+    }
+
+    //测试超时等待接口
+    @GetMapping("/feign/timeout")
+    public String paymentFeignTimeout(){
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return servicePort;
     }
 }

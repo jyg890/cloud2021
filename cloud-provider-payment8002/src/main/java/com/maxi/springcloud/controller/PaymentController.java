@@ -48,4 +48,10 @@ public class PaymentController {
         }
 
     }
+
+    //手写轮询算法测试接口
+    @GetMapping("/lb")
+    public String getPaymentLB(){
+        return servicePort;
+    }
 }
