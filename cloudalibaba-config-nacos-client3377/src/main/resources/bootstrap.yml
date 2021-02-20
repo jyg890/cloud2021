@@ -12,11 +12,19 @@ spring:
       config:
         server-addr: localhost:8848 #Nacos作为配置中心地址
         file-extension: yaml #指定yaml格式的配置
-        group: DEV_GROUP
-        namespace: 7d8f0f5a-6a53-4785-9686-dd460158e5d4
-
+        namespace: acae6067-d69b-47cf-8bc1-de5b2c193a82
+        group: TEST_GROUP
 
 # ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension}
+
+
 # nacos-config-client-dev.yaml
 
 # nacos-config-client-test.yaml   ----> config.info
+
+#后面切换的环境后缀就是用什么环境便切什么环境
+
+#nacos中dataid的组成格式与springboot配置文件中的匹配规则
+#1。prefix为spring.application.name的值
+#2。spring.profile.active为当前环境对应的profile
+#3。file-extension为配置内容的数据格式 目前仅支持properties和yml
