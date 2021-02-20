@@ -11,6 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @description
  * @create 2021−02-03 2:38 下午
  */
+//自定义的轮询算法
 @Component
 public class MyLB implements LoadBalancer {
 
