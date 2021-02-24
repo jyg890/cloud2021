@@ -22,8 +22,6 @@ spring:
 
 # nacos-config-client-test.yaml   ----> config.info
 
-#后面切换的环境后缀就是用什么环境便切什么环境
-
 #nacos中dataid的组成格式与springboot配置文件中的匹配规则
 #1。prefix为spring.application.name的值
 #2。spring.profile.active为当前环境对应的profile
