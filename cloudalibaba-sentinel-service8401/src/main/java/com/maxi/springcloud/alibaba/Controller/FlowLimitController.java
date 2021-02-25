@@ -52,7 +52,7 @@ public class FlowLimitController {
         return "------testE 测试异常数";
     }
 
-    @GetMapping("/testHotKey")
+    @GetMapping("/testHotKey")//测试热点key  如果不指明backhandler将会把报错页面显示在前端
     @SentinelResource(value = "testHotKey",blockHandler = "deal_testHotKey")
     public String testHotKey(@RequestParam(value = "p1", required = false) String p1,
                              @RequestParam(value = "p2", required = false) String p2) {
