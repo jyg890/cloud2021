@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
  * @description  自定义异常降级兜底方法
  * @create 2021−02-25 2:55 下午
  */
-@Component
-public class PaymentFallbackService implements PaymentService{//
+@Component//此为远程调用的实现方法 降级实现类 一定要加@Component注解
+public class PaymentFallbackService implements PaymentService{
 
     @Override
     public CommonResult<Payment> paymentSQL(Long id) {
