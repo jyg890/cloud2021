@@ -5,7 +5,7 @@ import com.atguigu.springcloud.entities.CommonResult;
 
 /**
  * @author JYG
- * @description
+ * @description 提供给订制的一对一的服务降级兜底方法
  * @create 2021−02-25 10:03 上午
  */
 public class BlockHandler {

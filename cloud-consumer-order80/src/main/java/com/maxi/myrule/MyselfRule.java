@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * @description
  * @create 2021−02-03 2:04 下午
  */
-@Configuration  //不可放在ComponentScan下能扫描到的包
+@Configuration  //注意此配置不可放在ComponentScan下能扫描到的包
 public class MyselfRule {
 
     @Bean

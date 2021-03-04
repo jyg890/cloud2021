@@ -60,7 +60,7 @@ public class CircleBreakerController {
         return new CommonResult<>(445,"blockHandler-sentinel限流,无此流水: blockException  "+blockException.getMessage(),payment);
     }
 
-    //==================测试OpenFeign远程调用
+    //==================测试OpenFeign远程调用=======================//
     @GetMapping(value = "/consumer/paymentSQL/{id}")
     public CommonResult<Payment> paymentSQL(@PathVariable("id") Long id)
     {

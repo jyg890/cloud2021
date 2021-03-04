@@ -19,9 +19,10 @@ import java.util.Date;
  */
 @Component
 @Slf4j
-//全局过滤器自定义
+//全局过滤器自定义  实现GlobalFilter   Ordered
 public class MyFilter implements GlobalFilter, Ordered {
 
+    //定义过滤器
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         log.info("**********come in GlobalFilter " + new Date());
@@ -34,7 +35,7 @@ public class MyFilter implements GlobalFilter, Ordered {
         return chain.filter(exchange);//去往下一个过滤链
     }
 
-    //过滤器执行等级
+    //过滤器执行等级  数字越小   等级越高
     @Override
     public int getOrder() {
         return 0;

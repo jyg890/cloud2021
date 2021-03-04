@@ -19,6 +19,8 @@ public interface AccountService {
     // 在FeignClient调用的下面接口中，@RequestParam中要有value即@RequestParam(value ="productId") Long productId格式，
     // 不能省略value写成@RequestParam(productId) Long productId这样，
     // 否则会访问的时候报异常feign.FeignException: status 400 reading xxx#xxxx(String); 
+
+    //@Param是mybatis的注解  @RequestParam是spring的
     @PostMapping(value = "/account/decrease")
     CommonResult decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
 }

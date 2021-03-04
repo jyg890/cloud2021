@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * @create 2021−02-03 4:34 下午
  */
 @Component  //希望能被扫描到
-@FeignClient("CLOUD-PAYMENT-SERVICE") //声明调用的服务名 配合主启动类上开启来使用
+@FeignClient("CLOUD-PAYMENT-SERVICE") //声明调用的服务名 在调用消费端要配合主启动类上开启来使用  @EnableFeignClients
 public interface PaymentFeignService {
 
     //测试结果为需要写上全路径名 如果写 /get/{id} 在被调用的controller上类上有requestMapping路径 也要写全路径名不然会报404错误

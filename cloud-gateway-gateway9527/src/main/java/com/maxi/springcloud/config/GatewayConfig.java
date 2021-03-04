@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @author JYG
- * @description
+ * @description  用代码实现的网关路由  一般不常用
  * @create 2021−02-05 4:56 下午
  */
 //构建路由定位 使目标页面通过网关来访问

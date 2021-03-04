@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 
 /**
  * @author JYG
- * @description
+ * @description  这里是用restTemplate来远程调用
  * @create 2021−02-20 2:11 下午
  */
 @RestController

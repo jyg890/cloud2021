@@ -60,7 +60,7 @@ public class PaymentController {
 
     @GetMapping("/discovery")
     public Object discovery(){
-
+        //discoveryClient去注册中心通过服务名拿到实例
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
         for (ServiceInstance element : instances) {
             log.info("*******" + element.getServiceId() + element.getHost() + element.getPort() + element.getUri());

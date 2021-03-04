@@ -1,4 +1,4 @@
-package com.maxi.springcloud.alibaba.Controller;
+package com.maxi.springcloud.alibaba.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author JYG
- * @description
+ * @description  测试sentinel服务降级熔断controller
  * @create 2021−02-23 4:45 下午
  */
 @RestController

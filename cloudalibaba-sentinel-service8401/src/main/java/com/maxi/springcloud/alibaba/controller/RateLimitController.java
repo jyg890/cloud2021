@@ -1,4 +1,4 @@
-package com.maxi.springcloud.alibaba.Controller;
+package com.maxi.springcloud.alibaba.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
@@ -18,7 +18,7 @@ public class RateLimitController {
 
     //按名称进行限流加自定义的后续处理 在sentinel中添加资源名为注解@SentinelResource中指定的value
     @GetMapping("/byResource")
-    @SentinelResource(value = "byResource",blockHandler = "handleException")
+    @SentinelResource(value = "byResource",blockHandler = "handleException")//blockHandler = "handleException"指定服务降低兜底的方法
     public CommonResult byResource()
     {
         return new CommonResult(200,"按资源名称限流测试OK",new Payment(2020L,"serial001"));
@@ -36,7 +36,7 @@ public class RateLimitController {
     //3 每一个业务方法都加一个兜底的 代码膨胀
     //4 全局统一的处理方法没有体现
     @GetMapping("/rateLimit/byUrl")
-    @SentinelResource(value = "byUrl")
+    @SentinelResource(value = "byUrl")  //@SentinelResource此注解里面的value值为sentinel中配置的资源名
     public CommonResult byUrl()
     {
         return new CommonResult(200,"按url限流测试OK",new Payment(2020L,"serial002"));
@@ -46,6 +46,8 @@ public class RateLimitController {
     //自定义的限流处理逻辑
     @GetMapping("/rateLimit/customerBlockHandler")
     @SentinelResource(value = "customerBlockHandler",blockHandlerClass = BlockHandler.class,blockHandler = "handlerException2")
+    //blockHandlerClass = BlockHandler.class 指明服务降低兜底的方法所在的类
+    //blockHandler = "handlerException2" 指明服务降级兜底的方法是在前面指定类中哪一个方法
     public CommonResult customerBlockHandler(){
         return new CommonResult(200,"按客戶自定义",new Payment(2020L,"serial003"));
     }

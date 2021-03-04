@@ -20,7 +20,7 @@ spring:
 service-url:
   nacos-user-service: http://nacos-payment-provider
 
-# 激活Sentinel对Feign的支持
+# 激活Sentinel对Feign的支持 而且在主启动类上要加@EnableFeignClients注解
 feign:
   sentinel:
     enabled: true

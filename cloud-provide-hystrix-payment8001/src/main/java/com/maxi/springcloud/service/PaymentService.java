@@ -30,7 +30,8 @@ public class PaymentService {
 
     /**
      * 功能描述: <br>
-     * 〈服务超时的方法〉
+     * 〈服务超时的方法〉 方法中注解@HystrixCommand加在方法上 表示对此方法要进行熔断降级  fallbackMethod为指定的兜底方法
+     * commandProperties  参数 指定此方法的异常类型和限定时间
      * @Author: JYG
      * @Date: 2021/2/4 2:26 下午
      */

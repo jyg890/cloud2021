@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 
 /**
  * @author JYG
- * @description
+ * @description  注册服务发现中心consul
  * @create 2021−02-02 4:51 下午
  */
 @RestController

@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 
 /**
  * @author JYG
- * @description
+ * @description  消息的生产者
  * @create 2021−02-19 9:36 上午
  */
 @EnableBinding(Source.class) //根据stream架构图先定义推送消息的管道
@@ -20,7 +20,7 @@ import javax.annotation.Resource;
 public class MessageProviderImpl implements MessageProvider {
 
     @Resource
-    private MessageChannel output;  //发送消息的管道
+    private MessageChannel output;  //定义发送消息的管道
 
     @Override
     public String send() {
